@@ -1,0 +1,27 @@
+syntax = 'proto3';
+
+package main;
+
+message BuildJobRequest {
+  string task = 1;
+  string gradlew = 2;
+  string manifest = 3;
+  string output = 4;
+  string projPath = 5;
+}
+
+message Apk {
+	string path = 1;
+  int64 rawSize = 2;
+  string size = 3;
+  string modTime = 4;
+}
+
+message BuildJobResponse {
+  repeated Apk apks = 1;
+  bool success = 2;
+}
+
+service Builder {
+  rpc Build(BuildJobRequest) returns (BuildJobResponse) {}
+}
