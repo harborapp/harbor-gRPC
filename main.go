@@ -3,9 +3,9 @@ package main
 import (
 	"net"
 
-	"github.com/harborapp/harbor-client/gradlew"
-	"github.com/harborapp/harbor-client/manifest"
-	"github.com/harborapp/harbor-client/project"
+	"github.com/harborapp/harbor-client-core/gradlew"
+	"github.com/harborapp/harbor-client-core/manifest"
+	"github.com/harborapp/harbor-client-core/project"
 	log "github.com/sirupsen/logrus"
 	context "golang.org/x/net/context"
 	"google.golang.org/grpc"
